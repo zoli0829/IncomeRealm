@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct AddTransactionView: View {
     @State private var amount = 0.0
@@ -16,7 +17,7 @@ struct AddTransactionView: View {
     //@Binding var transactions: [Transaction]
     var transactionToEdit: TransactionModel?
     @Environment(\.dismiss) var dismiss
-    
+    @ObservedResults(TransactionModel.self) var transactions
     @AppStorage("currency") var currency = Currency.usd
     
     var numberFormatter: NumberFormatter {
@@ -70,6 +71,9 @@ struct AddTransactionView: View {
 //                    let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
 //                    transactions.append(transaction)
 //                }
+                
+                let transaction = TransactionModel(_id: ObjectId(), title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
+                $transactions.append(transaction)
                 
                 dismiss()
                 
