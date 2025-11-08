@@ -125,15 +125,12 @@ struct HomeView: View {
                     BalanceView()
                     List {
                         ForEach(displayTransactions) { transaction in
-                            TransactionView(transaction: transaction)
-                                .foregroundStyle(.black)
-                            
-//                            Button(action: {
-//                                transactionToEdit = transaction
-//                            }, label: {
-//                                TransactionView(transaction: transaction)
-//                                    .foregroundStyle(.black)
-//                            })
+                            Button(action: {
+                                transactionToEdit = transaction
+                            }, label: {
+                                TransactionView(transaction: transaction)
+                                    .foregroundStyle(.black)
+                            })
                         }
                         .onDelete(perform: delete)
                     }
@@ -146,7 +143,7 @@ struct HomeView: View {
             })
             .navigationTitle("Income")
             .navigationDestination(item: $transactionToEdit, destination: { transactionToEdit in
-                AddTransactionView(transactionToEdit: transactionToEdit)
+                EditTransactionView(transactionToEdit: transactionToEdit)
             })
             .navigationDestination(isPresented: $showAddTransactionView, destination: {
                 AddTransactionView()

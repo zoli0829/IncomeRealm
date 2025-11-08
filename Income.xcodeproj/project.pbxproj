@@ -19,6 +19,7 @@
 		20FB862C2B6921BD00E430BE /* TransactionTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB862B2B6921BD00E430BE /* TransactionTypeModel.swift */; };
 		20FB862E2B69285F00E430BE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FB862D2B69285F00E430BE /* Colors.xcassets */; };
 		C2BA40FE2EBBCC6C00A7EB80 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C2BA40FD2EBBCC6C00A7EB80 /* RealmSwift */; };
+		C2D4DE142EBFA9E3004B83D0 /* EditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D4DE132EBFA9E3004B83D0 /* EditTransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		20FB86292B69213900E430BE /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		20FB862B2B6921BD00E430BE /* TransactionTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTypeModel.swift; sourceTree = "<group>"; };
 		20FB862D2B69285F00E430BE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C2D4DE132EBFA9E3004B83D0 /* EditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				206DB8A82B6A6B980076400A /* TransactionView.swift */,
 				206DB8AA2B6A7ABC0076400A /* AddTransactionView.swift */,
 				20A796E62B710D2200D33962 /* SettingsView.swift */,
+				C2D4DE132EBFA9E3004B83D0 /* EditTransactionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				206DB8AB2B6A7ABC0076400A /* AddTransactionView.swift in Sources */,
 				20FB861D2B691FE700E430BE /* HomeView.swift in Sources */,
 				20FB861B2B691FE700E430BE /* IncomeApp.swift in Sources */,
+				C2D4DE142EBFA9E3004B83D0 /* EditTransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
