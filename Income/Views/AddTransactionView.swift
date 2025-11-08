@@ -13,8 +13,8 @@ struct AddTransactionView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showAlert = false
-    @Binding var transactions: [Transaction]
-    var transactionToEdit: Transaction?
+    //@Binding var transactions: [Transaction]
+    var transactionToEdit: TransactionModel?
     @Environment(\.dismiss) var dismiss
     
     @AppStorage("currency") var currency = Currency.usd
@@ -57,19 +57,19 @@ struct AddTransactionView: View {
                 //correction here. When editing the last date should be used
 //                let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
                 
-                if let transactionToEdit = transactionToEdit {
-                    guard let indexOfTransaction = transactions.firstIndex(of: transactionToEdit) else {
-                        alertTitle = "Something went wrong"
-                        alertMessage = "Cannot update this transaction right now."
-                        showAlert = true
-                        return
-                    }
-                    let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: transactionToEdit.date)
-                    transactions[indexOfTransaction] = transaction
-                } else {
-                    let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
-                    transactions.append(transaction)
-                }
+//                if let transactionToEdit = transactionToEdit {
+//                    guard let indexOfTransaction = transactions.firstIndex(of: transactionToEdit) else {
+//                        alertTitle = "Something went wrong"
+//                        alertMessage = "Cannot update this transaction right now."
+//                        showAlert = true
+//                        return
+//                    }
+//                    let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: transactionToEdit.date)
+//                    transactions[indexOfTransaction] = transaction
+//                } else {
+//                    let transaction = Transaction(title: transactionTitle, type: selectedTransactionType, amount: amount, date: Date())
+//                    transactions.append(transaction)
+//                }
                 
                 dismiss()
                 
@@ -108,6 +108,6 @@ struct AddTransactionView: View {
     }
 }
 
-#Preview {
-    AddTransactionView(transactions: .constant([]))
-}
+//#Preview {
+//    AddTransactionView(transactions: .constant([]))
+//}
